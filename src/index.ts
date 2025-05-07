@@ -134,3 +134,21 @@ function getDayType(day: Day): string {
 
 // console.log(getDayType(Day.Monday));
 // console.log(getDayType(Day.Sunday));
+
+//***  Solution 6 ***/
+async function squareAsync(n: number): Promise<number> {
+  return new Promise((resolve, reject) => {
+    if (n < 0) {
+      reject("Error: Negative number not allowed");
+    } else {
+      const square = n * n;
+      setTimeout(() => {
+        resolve(square);
+      }, 1000);
+      return;
+    }
+  });
+}
+
+// squareAsync(8).then(console.log);
+// squareAsync(-8).catch(console.error);
