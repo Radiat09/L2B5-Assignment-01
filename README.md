@@ -16,7 +16,7 @@ let name = "Alice"; // TypeScript infers `name` as `string`
 const isActive = true; // TypeScript infers `isActive` as `boolean`
 ```
 
-Here, TypeScript automatically assigns types to age, name, and isActive without requiring ==: number==, ==: string==, or == : boolean ==.
+Here, TypeScript automatically assigns types to age, name, and isActive without requiring : number, : string, or : boolean.
 
 ### Union and Intersection Types
 
