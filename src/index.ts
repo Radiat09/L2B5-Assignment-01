@@ -74,7 +74,7 @@ const myCar = new Car("Toyota", 2020, "Blackish Red", true, "Corolla");
 // console.log(myCar.getInfo());
 // console.log(myCar.getModel());
 
-//***  Solution 4 ***/
+//***  Solution 5 ***/
 function processValue(value: string | number): number {
   if (typeof value === "string") {
     return value.length;
@@ -85,3 +85,31 @@ function processValue(value: string | number): number {
 
 // console.log(processValue("hello"));
 // console.log(processValue(10));
+
+//***  Solution 6 ***/
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (products.length === 0) {
+    return null;
+  }
+
+  const prices = products.map((product) => product.price);
+  const highestPrice = Math.max(...prices);
+
+  const theExpensiveOne = products.find(
+    (product) => product.price === highestPrice
+  );
+
+  return theExpensiveOne ?? null;
+}
+
+const products: Product[] = [
+  { name: "Pen", price: 10 },
+  { name: "Notebook", price: 10 },
+  { name: "Bag", price: 10 },
+];
+// console.log(getMostExpensiveProduct(products));
