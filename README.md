@@ -63,3 +63,19 @@ type B = { b: string };
 type C = A | B; // Must have `a` OR `b`  [Union]
 type D = A & B; // Must have `a` AND `b` [Intersection]
 ```
+
+## 🚀 Run the Project
+
+### Quick Start (with live reload)
+
+```bash
+tsnd --respawn ./src/index.ts
+```
+
+## Prerequisites:
+
+### Install TypeScript globally if not already installed:
+
+```bash
+npm install -g typescript ts-node ts-node-dev
+```
